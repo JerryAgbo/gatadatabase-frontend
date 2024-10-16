@@ -1,0 +1,338 @@
+.parent-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.signup-page-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.video-container {
+  flex: 0 1 30%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+.right-side-content {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 20px;
+  
+}
+.logo-container img {
+  width: 20%;
+  height: auto;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.signup-page-text,
+.signup-input-container,
+.signup-agreement,
+.signup-submit-button,
+.signup-last-text {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.signup-main-text {
+  font-weight: 700;
+  font-size: 90%;
+  margin-top: 0%;
+  margin-left: 10%;
+}
+
+.signup-sub-text1,
+.signup-sub-text2 {
+  font-weight: 200;
+  font-size: 70%;
+  margin-top: -18px;
+  margin-bottom: 1.5%;
+  margin-left: 10%;
+}
+
+.file-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.file-input-trigger {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.profile-pic-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  display: block;
+}
+
+.no-image {
+  display: none;
+}
+
+/* Adjustments to align the title and profile picture input */
+.signup-sub-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.signup-input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.signup-input-group input {
+  width: 128%; /* Set width to 100% to fill the container */
+  padding: 8px; /* Keep your padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.PhoneInput {
+  width: 95%; /* Ensure the PhoneInput fills the width of its container */
+  height: 40px; /* Adjust height as needed */
+
+  border-radius: 4px; /* Optional: Rounded corners for aesthetics */
+  display: flex;
+  align-items: center;
+  padding: 8px 4px; /* Adjusted padding for better spacing */
+  border: 2px solid #ddd; /* Modern, lighter border */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  font-size: 16px; /* Slightly larger font size for better readability */
+  background-color: #ffffff; /* White background for cleanliness */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions for interaction */
+}
+
+.PhoneInput:focus-within {
+  border-color: #007bff; /* Highlight color on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Enhanced focus shadow */
+}
+
+/* Styling for the country select within PhoneInput */
+.PhoneInputCountrySelect {
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Pointer cursor for better UX */
+}
+
+/* Specifically targeting the flag in the country select */
+.PhoneInputCountrySelect [role="img"] {
+  width: 20px; /* Set flag width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Input field within PhoneInput */
+.PhoneInputInput {
+  border: none; /* Remove individual border */
+  margin-left: 0px; /* Space between flag and number input */
+  font-size: 16px; /* Matching font size for consistency */
+  width: 100%; /* Utilize available space */
+}
+
+/* Adjust when focused to enhance user experience */
+.PhoneInputInput:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Additional responsiveness and spacing for overall layout */
+.signup-input-group2 {
+  width: 30%; /* Adjust the width as needed */
+  margin-bottom: 0.5%; /* Space between input groups */
+}
+
+/* Enhance label appearance for consistency */
+.signup-input-group2 label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.signup-input-group select {
+  margin-top: 0%;
+  width: 180%; /* Ensures the select element fills the container */
+  padding: 8px 22px; /* Padding for better text visibility */
+  border: 1px solid #ccc; /* Consistent border styling with input fields */
+  border-radius: 4px; /* Rounded corners for a modern look */
+  background-color: #f9f9f9; /* Light background to match input fields */
+  font-size: 14px; /* Font size consistency with input fields */
+  color: #333; /* Text color consistency */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+  appearance: none; /* Removes default browser styling */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.362 292.362"><path fill="%23666" d="M287 69.095l-14.273-14.273a9.93 9.93 0 0 0-7.071-2.928c-2.683 0-5.215 1.07-7.071 2.928L146.181 169.268 35.727 58.814a9.93 9.93 0 0 0-7.071-2.928c-2.683 0-5.215 1.07-7.071 2.928L7.311 69.095C2.596 73.81 2.596 81.507 7.311 86.222l131.836 131.836c2.856 2.856 6.636 4.284 10.417 4.284s7.561-1.429 10.417-4.284L287 86.222c4.715-4.715 4.715-12.411-.001-17.127z"/></svg>'); /* Custom dropdown arrow */
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+
+.signup-input-group select:focus {
+  border-color: #007bff; /* Highlight color when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a glow effect on focus */
+  outline: none; /* Removes the default focus outline */
+}
+
+.input-row {
+  display: flex;
+  gap: 80px;
+  margin-left: 10%;
+  margin-top: 0%;
+  margin-bottom: 0.7%;
+}
+/* This container wraps both the agreement and account existence sections */
+.signup-agreement-container {
+  display: flex;
+  justify-content: flex-end; /* Moves items to the right */
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Ensures the container takes up the full width */
+  margin-top: 0%; /* Adds some vertical spacing */
+}
+
+.signup-agreement-section {
+  margin-left: 10%;
+  font-size: 85%;
+}
+
+/* Styles for the agreement section, including the checkbox and label */
+.signup-agreement {
+  display: flex;
+  align-items: center; /* Aligns the checkbox and label vertically */
+  gap: 73px; /* Adds space between the checkbox and the text */
+  font-size: 70%; /* Adjusts font size */
+}
+
+/* Adds additional right margin to the checkbox to create more space between it and the label */
+.signup-agreement input[type="checkbox"] {
+  margin-right: 4px; /* Increase this value as needed */
+  size: small;
+}
+
+/* Styles for highlighting terms and privacy policy */
+.signup-termsAgree {
+  color: #007bff; /* Change color as needed for highlighting */
+  cursor: pointer;
+  text-decoration: none; /* Removes underline from links */
+  margin-top: 0%;
+}
+
+.highlight {
+  text-decoration: none; /* Ensures no underline for highlighted text */
+}
+
+/* Styles for the account existence section */
+.signup-account-exists {
+  display: flex;
+  align-items: center; /* Keeps text and link aligned */
+  font-size: 90%; /* Sets font size to default */
+}
+
+.signup-submit-button {
+  padding: 8px 25px;
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid #007bff; /* Blue border color */
+  background-color: #007bff; /* Blue background color */
+  color: white; /* Text color */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  outline: none; /* Removes the outline to improve the appearance */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+  margin-left: 10%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.signup-submit-button:hover,
+.signup-submit-button:focus {
+  background-color: #0056b3; /* Darker blue background on hover/focus */
+  transform: scale(
+    1.05
+  ); /* Slightly increases size on hover/focus for feedback */
+}
+
+.signup-submit-button:active {
+  transform: scale(
+    0.95
+  ); /* Slightly decreases size when clicked for feedback */
+}
+.signup-last-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100%;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-left: -90px;
+}
+
+.file-upload-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-left: 52%;
+  margin-top: -10%;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.upload-placeholder {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bi-person-plus {
+  fill: #007bff; /* Color of the icon */
+}

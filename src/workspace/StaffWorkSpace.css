@@ -1,0 +1,272 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between rows */
+  margin-top: 60px;
+  margin-left: 25%;
+  margin-right: auto;
+  width: 70%; /* Adjust the width for better fit */
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ensure items are evenly spaced */
+  width: 100%;
+  gap: 15px; /* Space between items within a row */
+}
+
+.staff-profile-page {
+  flex: 1 0 40%; /* Reduce the size slightly more for smaller boxes */
+  position: relative;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 220px; /* Further reduce height for smaller boxes */
+}
+
+.staff-profile-page:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.staff-info {
+  display: flex;
+  flex-direction: row; /* Change from column to row for horizontal layout */
+  align-items: center; /* Center items vertically */
+  padding: 10px;
+  width: 100%;
+}
+
+.profile-picture {
+  width: 100px; /* Size of the picture */
+  height: 100px;
+  margin-right: 20px; /* Right margin for spacing between picture and text */
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+}
+
+.profile-info {
+  margin-top: 20px; /* Push job information text down by 20px */
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start; /* Align text to the start (left) */
+}
+
+.profile-info p {
+  font-size: 14px; /* Maintain a readable font size */
+  margin: 5px 0; /* Vertical margin for spacing between paragraphs */
+}
+
+.profile-info strong {
+  margin-right: 5px; /* Space between label and data */
+}
+
+.certificate-display p,
+.certificate-upload p {
+  font-size: 14px; /* Adjusted font size for readability */
+}
+
+.profile-info strong {
+  margin-right: 5px;
+}
+
+.certificate-display p,
+.certificate-upload p {
+  font-size: 14px; /* Adjust font size for better fit */
+}
+
+.profile-info strong {
+  margin-right: 5px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.top-left-label {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: turquoise;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cert-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Increased gap for clarity */
+  padding: 10px;
+  margin-left: 20px; /* Additional left margin for alignment */
+}
+
+.certificate-upload,
+.certificate-display {
+  flex: 1;
+  margin-top: 30px;
+  margin-left: 18px;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  width: 180px;
+}
+
+.certificate-upload:hover,
+.certificate-display:hover {
+  transform: translateY(-3px); /* Elevate on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.certificate-upload p,
+.certificate-display p {
+  font-size: 14px; /* Readable text size */
+  color: #333; /* Darker text for better readability */
+  margin: 0; /* Reset margin */
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3498db; /* Blue color for the spinner */
+  width: 36px;
+  height: 36px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.grid-inner-box-contain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  /* Adjust the height if necessary to control how much of the container is filled by the grid */
+  height: auto; /* Changed from 50% to auto to accommodate the content size dynamically */
+  margin-left: 0px;
+  position: relative;
+  top: 10px; /* Adjusted to lift the grid boxes higher up */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-inner {
+  margin-top: 10px;
+  cursor: pointer; /* Indicates the box is clickable */
+  padding: 13px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-inner:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box-title {
+  display: block; /* Ensures the name spans the full width for better clickability */
+  margin-bottom: 5px; /* Space below the name */
+}
+
+.delete-box-btn {
+  font-size: 0.75em;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #f44336; /* Red button for delete */
+  color: white; /* White text for readability */
+  border: none; /* No border for a cleaner look */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.delete-box-btn:hover {
+  background-color: #d32f2f; /* Darker shade on hover for feedback */
+}
+/* Enhance the hover effect for editable boxes to make it more noticeable */
+.grid-inner.editable:hover {
+  transform: scale(1.05); /* Slightly larger scale for editable boxes */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); /* Darker shadow for more depth */
+}
+
+.grid-inner:nth-child(1) {
+  background-color: #90ee90;
+}
+.grid-inner:nth-child(2) {
+  background-color: #ffd580;
+}
+.grid-inner:nth-child(3) {
+  background-color: rgb(245, 127, 146);
+}
+y .grid-inner:nth-child(4) {
+  background-color: #40e0d0;
+}
+
+.grid-inner:nth-child(5) {
+  background-color: #fddc5c;
+}

@@ -1,0 +1,10 @@
+/* App.css or a similar file */
+.main-container {
+  display: flex;
+  flex-direction: row-reverse; /* Reverses the order to move sidebar to the right */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+  flex-grow: 1; /* Allows the content area to take up the remaining space */
+}

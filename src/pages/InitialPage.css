@@ -1,0 +1,113 @@
+
+/* Apply font and color to everything */
+* {
+  font-family: "Roboto", sans-serif;
+  color: #333333; /* Changed color value to use six digits for better consistency */
+}
+
+.initialPage {
+  text-align: center;
+  padding: 20px;
+  position: flex;
+  margin-top: 150px;
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+.text {
+  margin-top: 2%;
+  font-weight: 700;
+  margin-left: 3%;
+  font-size: medium;
+}
+
+.signup-container {
+  margin-top: 0%;
+}
+
+.logo {
+  width: 19%;
+  height: 150%;
+  margin-left: 6%;
+}
+
+.building {
+  margin: 0;
+  /* Reset margins */
+  width: 40vw;
+  /* Set width to 100% of the viewport width */
+  height: 95vh;
+  /* Set height to 100% of the viewport height */
+  position: absolute;
+  /* Position it absolutely relative to the viewport */
+  top: 5px;
+  /* Align the top edge with the viewport top */
+  left: -11px;
+  /* Align the left edge with the viewport left */
+  min-height: 98vh;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.staff-button,
+.admin-button {
+  color: #fff;
+  border: none;
+  padding: 8px 30px;
+  /* Increased padding */
+  width: 150px;
+  margin-bottom: 10px;
+  /* Added margin to create space between buttons */
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 6%;
+  margin-bottom: -35px;
+  margin-top: 20px;
+}
+
+.staff-button {
+  background-color: #007bff;
+}
+
+.admin-button {
+  background-color: black;
+  /* Changed background color to black */
+}
+
+.staff-button:hover,
+.admin-button:hover {
+  opacity: 0.8;
+  /* Reduced opacity on hover */
+}
+
+p b {
+  font-weight: 500;
+  /* Added font weight */
+}
+
+@media (min-width: 992px) {
+  .initialPage {
+    margin-top: 250px;
+    margin-left: 250px;
+  }
+
+  .logo {
+    width: 19%;
+    height: 150%;
+    margin-left: 6%;
+  }
+
+  .building {
+    width: 40vw;
+    height: 95vh;
+    min-height: 98vh;
+    left: -11px;
+  }
+
+  .staff-button,
+  .admin-button {
+    margin-left: 6%;
+  }
+}

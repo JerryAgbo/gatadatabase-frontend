@@ -1,0 +1,40 @@
+/* SearchBar.css */
+.search-bar {
+  position: fixed; /* Fix position relative to the viewport */
+  top: 20px; /* Distance from the top of the viewport */
+  right: 50%; /* Centering it to the right half of the screen */
+  transform: translateX(
+    50%
+  ); /* Adjust to precisely center from the middle to the right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001; /* Ensure it sits above most other content */
+  background-color: white;
+}
+
+.search-bar input[type="text"] {
+  width: 650px; /* Fixed width */
+  padding: 10px 20px; /* Padding inside the input */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+  outline: none; /* Removes the outline to make it look cleaner */
+  font-size: 16px; /* Text size */
+  color: #333; /* Text color */
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: #3498db; /* Border color on focus */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5); /* Glow effect on focus */
+}
+
+/* New class for fading out elements */
+.fade-out {
+  transition: opacity 3.5s ease-out;
+  opacity: 0;
+}

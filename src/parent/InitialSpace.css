@@ -1,0 +1,17 @@
+.InitialSpace {
+  display: flex;            /* Establishes a flex container */
+  justify-content: center;  /* Centers children horizontally in the container */
+  align-items: center;      /* Centers children vertically in the container */
+  min-height: 100vh;        /* Minimum height of viewport height to take full screen */
+  width: 100%;              /* Take full width to utilize all space */
+  padding: 20px;            /* Optional: Adds some padding around the content */
+  box-sizing: border-box;   /* Ensures padding is included in width/height calculations */
+}
+
+@media (max-width: 768px) {
+  .InitialSpace {
+    flex-direction: column; /* Stacks children vertically on smaller screens */
+    justify-content: flex-start; /* Aligns content to the top on smaller screens */
+    padding: 10px;          /* Smaller padding for smaller screens */
+  }
+}

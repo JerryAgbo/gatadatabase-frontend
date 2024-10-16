@@ -1,0 +1,94 @@
+.base-structure {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.signup-framework {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.media-playback-area {
+  flex: 0 1 30%;
+}
+
+.media-playback-area video {
+  width: 100%;
+  height: auto;
+}
+
+.enrollment-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.branding-section img {
+  width: 25%;
+  height: auto;
+  margin-top: 15%;
+  margin-left: 50%;
+}
+
+.user-registration-panel,
+.field-group,
+/* Assuming .container-agreement was a typo or not used in the JSX. If used, rename appropriately */
+.action-confirm,
+.helper-text {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 280%;
+  margin-top: 4%;
+  margin-left: 22%;
+}
+
+.action-confirm {
+  padding: 8px 25px;
+  width: 350px;
+  border-radius: 8px;
+  border: 1px solid #007bff; /* Blue border color */
+  background-color: #007bff; /* Blue background color */
+  color: white; /* Text color */
+  font-size: 19px; /* Text size */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  outline: none; /* Removes the outline to improve the appearance */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+  margin-left: 25%;
+  margin-top: 1.5%;
+}
+
+.action-confirm:hover,
+.action-confirm:focus {
+  background-color: #0056b3; /* Darker blue background on hover/focus */
+  transform: scale(
+    1.05
+  ); /* Slightly increases size on hover/focus for feedback */
+}
+
+.action-confirm:action {
+  transform: scale(
+    0.95
+  ); /* Slightly decreases size when clicked for feedback */
+}
+
+.helper-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100%;
+  font-weight: 600;
+  margin-top: 4%;
+  margin-left: -40px;
+}

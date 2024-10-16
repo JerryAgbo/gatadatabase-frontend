@@ -1,0 +1,233 @@
+/* Sidebar.css */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 230px; /* Fixed sidebar width */
+  height: 95vh; /* Full viewport height */
+  position: fixed; /* Fix position to the viewport */
+  left: 2%; /* Align to the left side */
+  top: 2%; /* Align to the top */
+  background-color: #fff; /* White background */
+  color: black; /* Black text color */
+  padding: 20px; /* Spacing inside the sidebar */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* More pronounced drop shadow */
+  border-radius: 20px; /* Rounded corners */
+  z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.sidebar-logo {
+  width: 50%; /* Ensures the logo container fills the sidebar */
+  text-align: center; /* Centers the logo image */
+  padding: 13px 0; /* Adds some vertical padding for spacing */
+}
+
+.sidebar-logo img {
+  max-width: 100%; /* Ensures the logo fits within the container */
+  height: auto; /* Maintains the aspect ratio of the logo */
+}
+
+.home {
+  font-weight: lighter;
+  font-size: 80%;
+}
+
+.upperitem-container {
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+  background-color: #00adf1; /* Your desired shade of blue */
+  padding: 6px 20px 6px 10px; /* Slightly more padding on the right */
+  margin-top: 0%; /* Margin for spacing */
+  border-radius: 3px;
+  width: 100%; /* Ensures the container takes full width if not already set */
+}
+
+.upperitem-icon,
+.styled-upperitem {
+  margin: 0 2px; /* Adjusts spacing between the icon and the text */
+}
+
+.styled-upperitem {
+  text-decoration: none; /* Remove underline */
+  margin-left: 1px; /* Space between the icon and the text */
+  margin-top: 1%;
+  color: white; /* Ensure text color is white */
+}
+
+.upperitem-icon {
+  margin-right: 5px; /* Space between the icon and the text */
+  width: 20px; /* Icon size as needed */
+  height: 20px; /* Icon size as needed */
+}
+
+.custom-line {
+  height: 1px; /* Increased height makes the line bolder */
+  background-color: #000; /* Color of the line */
+  width: 100%; /* Full width of the container */
+  margin-top: 10px; /* Adds some vertical space around the line */
+  margin-bottom: 20%;
+}
+
+.admin-text1 {
+  font-weight: 400;
+  color: #666;
+  margin-left: 20px; /* Adjusted to remove negative margin */
+  margin-top: 0px; /* Keep for .admin-text1 */
+  font-size: 0.7rem;
+  margin-bottom: 0%;
+}
+
+.admin-text2 {
+  margin-top: 0px; /* Specific to .admin-text2 */
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+/* Admin Options */
+.admin-options {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px; /* Indent admin options for visual hierarchy */
+}
+
+.admin-link {
+  display: flex; /* Allows icon and text alignment */
+  align-items: center; /* Vertically centers the icon with the text */
+  text-decoration: none;
+  color: black; /* Adjust color as needed */
+  margin: 5px 0; /* Spacing between options */
+}
+
+.link-icon {
+  margin-right: 8px; /* Adds space between the icon and the text */
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+}
+
+/* Settings and Logout */
+.settings-logout {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px; /* Consistent with admin options */
+  margin-top: auto; /* Pushes to the bottom */
+}
+
+.settings-logout-link {
+  text-decoration: none;
+  color: black; /* Adjust color as needed */
+  margin: 5px 0; /* Spacing */
+}
+
+/* Existing styles */
+
+/* Additional styles for dropdown icons and menu items */
+.dropdown-icon {
+  width: 22px; /* Reduce the width for a smaller icon */
+  height: 22px; /* Reduce the height for a smaller icon */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px; /* Adjust as needed */
+  margin-top: 5px;
+}
+
+.dropdown-item {
+  font-size: 0.9rem; /* Smaller font size for dropdown items */
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.dropdown-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background-color: #007bff; /* Blue color */
+  border-radius: 2px;
+}
+
+.admin-option-item {
+  margin-bottom: 10px;
+}
+
+.admin-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures the dropdown icon is aligned to the right */
+}
+
+/* Sidebar.css with adjustments for smaller sizes */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 230px; /* Fixed sidebar width */
+  height: 95vh; /* Full viewport height */
+  position: fixed; /* Fix position to the viewport */
+  left: 2%; /* Align to the left side */
+  top: 2%; /* Align to the top */
+  background-color: #fff; /* White background */
+  color: black; /* Black text color */
+  padding: 20px; /* Spacing inside the sidebar */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* More pronounced drop shadow */
+  border-radius: 20px; /* Rounded corners */
+  z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+/* Other unchanged styles... */
+
+/* Adjusts the base font size for admin text and dropdown items */
+.admin-text1,
+.admin-text2,
+.dropdown-item {
+  font-size: 0.65rem; /* Reduced from 0.7rem and 0.9rem */
+}
+
+/* Reduces the size of icons in admin options */
+.link-icon,
+.upperitem-icon {
+  width: 15px; /* Reduced from 20px */
+  height: 15px; /* Reduced from 20px */
+}
+
+/* Reduces the margin between admin option items for a tighter look */
+.admin-option-item {
+  margin-bottom: 5px; /* Reduced from 10px */
+}
+
+/* Tightens the spacing in the admin link items */
+.admin-link {
+  margin: 3px 0; /* Reduced from 5px 0 for tighter vertical spacing */
+  align-items: center;
+}
+
+/* Adjusts the dropdown menu padding for a tighter dropdown */
+.dropdown-menu {
+  padding-left: 20px; /* Reduced from 25px for tighter indent */
+  margin-top: 3px; /* Reduced from 5px for less gap from the parent item */
+}
+
+/* Further reduces the size of the dropdown items for a more compact look */
+.dropdown-item {
+  padding-left: 10px; /* Reduced from 15px for tighter indent */
+  margin-bottom: 3px; /* Reduced from 5px for tighter vertical spacing */
+}
+
+/* Adjusts the pseudo-element of dropdown items for consistency */
+.dropdown-item:before {
+  width: 3px; /* Reduced from 4px for a thinner leading line */
+  height: 15px; /* Reduced from 20px for better alignment with reduced font */
+}

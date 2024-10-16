@@ -1,0 +1,186 @@
+.container-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container-registration {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.container-video {
+  flex: 0 1 30%;
+}
+
+.container-video video {
+  width: 100%;
+  height: auto;
+}
+
+.content-registration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container-logo img {
+  width: 20%;
+  height: auto;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.text-registration,
+.container-inputs,
+.container-agreement,
+.button-submit,
+.text-footer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-header {
+  font-weight: 700;
+  font-size: 90%;
+  margin-top: 0%;
+  margin-left: 10%;
+}
+
+.text-subheader-personal {
+  font-weight: 200;
+  font-size: 70%;
+  margin-top: -18px;
+  margin-bottom: 1.5%;
+  margin-left: 10%;
+}
+
+.group-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.group-input input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+/* Additional Styles for Select Dropdown and Label */
+.group-input select {
+  width: 120%; /* Ensures the select element fills the container */
+  padding: 8px 12px; /* Padding for better text visibility */
+  border: 1px solid #ccc; /* Consistent border styling with input fields */
+  border-radius: 4px; /* Rounded corners for a modern look */
+  background-color: #f9f9f9; /* Light background to match input fields */
+  font-size: 14px; /* Font size consistency with input fields */
+  color: #333; /* Text color consistency */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+  appearance: none; /* Removes default browser styling */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.362 292.362"><path fill="%23666" d="M287 69.095l-14.273-14.273a9.93 9.93 0 0 0-7.071-2.928c-2.683 0-5.215 1.07-7.071 2.928L146.181 169.268 35.727 58.814a9.93 9.93 0 0 0-7.071-2.928c-2.683 0-5.215 1.07-7.071 2.928L7.311 69.095C2.596 73.81 2.596 81.507 7.311 86.222l131.836 131.836c2.856 2.856 6.636 4.284 10.417 4.284s7.561-1.429 10.417-4.284L287 86.222c4.715-4.715 4.715-12.411-.001-17.127z"/></svg>'); /* Custom dropdown arrow */
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+
+.group-input select:focus {
+  border-color: #007bff; /* Highlight color when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a glow effect on focus */
+  outline: none; /* Removes the default focus outline */
+}
+
+/* Style adjustments for consistency and modern appearance */
+.group-input label {
+  font-weight: 600; /* Ensures the label is visibly bold */
+  margin-bottom: 10px; /* More space between label and select dropdown */
+  display: block; /* Ensures label takes up its own line for clarity */
+  color: #333; /* Dark grey color for better readability */
+}
+
+/* Hover effect for the button for visual feedback */
+.button-submit:hover {
+  background-color: #0056b3; /* Darker shade for hover state */
+  transform: translateY(-2px); /* Slight lift effect for interactivity */
+}
+
+/* Focus effect to indicate active selection, replacing the previously mentioned scale effect */
+.button-submit:focus {
+  box-shadow: 0 0 0 2px #0056b3; /* Blue glow effect */
+}
+
+.row-input {
+  display: flex;
+  justify-content: space-between; /* This will space out the child elements */
+  gap: 20px; /* Keeps a gap between the input fields */
+  margin-left: 10%;
+  margin-top: 0%;
+  margin-bottom: 0.5%;
+  width: 50%; /* Adjust width as needed to fit your design */
+}
+
+.group-input {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* This allows the input groups to flexibly fill the row */
+}
+
+/* Additional styles to ensure the select and input fields are consistent */
+.group-input select,
+.group-input input {
+  width: 100%; /* Ensure the select fills its container */
+  /* Other styling properties */
+}
+
+.button-submit {
+  padding: 8px 25px;
+  width: 150px;
+  border-radius: 8px;
+  border: 1px solid #007bff; /* Blue border color */
+  background-color: #007bff; /* Blue background color */
+  color: white; /* Text color */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  outline: none; /* Removes the outline to improve the appearance */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+  margin-left: 10%;
+  margin-top: 0%;
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #0056b3; /* Darker blue background on hover/focus */
+  transform: scale(
+    1.05
+  ); /* Slightly increases size on hover/focus for feedback */
+}
+
+.button-submit:focus {
+  transform: scale(
+    0.95
+  ); /* Slightly decreases size when clicked for feedback */
+}
+.text-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100%;
+  font-weight: 600;
+  margin-top: 3%;
+  margin-left: -90px;
+}
