@@ -17,34 +17,32 @@ function InitialPage() {
 
   return (
     <div className="initialPage">
-      <div className="signup-container">
-        <h5 className="text">
-          Fill in the Data Today so we can better <br />
-          assist you
-        </h5>
-        <img src={building} alt="building" className="building" />
-        <img src={logo} alt="Logo" className="logo" />
-        <p>
-          {" "}
-          <button
-            type="button"
-            className="staff-button"
-            onClick={navigateToLogin}
-          >
-            Staff
-          </button>{" "}
-        </p>{" "}
-        {/* Updated to use navigate */}
-        <p>
-          {" "}
-          <button
-            type="button"
-            className="admin-button"
-            onClick={navigateToAdmin}
-          >
-            Admin
-          </button>{" "}
-        </p>
+      <div className="page-container">
+        <div className="left-column">
+          <img src={building} alt="building" className="building" />
+        </div>
+        <div className="right-column">
+          <h5 className="text">
+            Fill in the Data Today so we can better <br /> assist you
+          </h5>
+          <img src={logo} alt="Logo" className="logo" />
+          <div className="buttons-container">
+            <button
+              type="button"
+              className="staff-button"
+              onClick={navigateToLogin}
+            >
+              Staff
+            </button>
+            <button
+              type="button"
+              className="admin-button"
+              onClick={navigateToAdmin}
+            >
+              Admin
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
