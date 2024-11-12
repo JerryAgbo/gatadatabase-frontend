@@ -27,6 +27,13 @@ const Sidebar = () => {
     navigate(path);
   };
 
+  const handleLogout = () => {
+    // Clear any session data here (e.g., clear localStorage or context)
+    localStorage.clear(); // Example: clearing localStorage (adjust as necessary)
+    sessionStorage.clear(); // If using sessionStorage
+    navigate("/login"); // Redirect to login page after logout
+  };
+
   const itemIcons = {
     Home: home,
     Statistics: stats,
@@ -127,12 +134,15 @@ const Sidebar = () => {
       <div className="settings-logout">
         <p
           className="settings-logout-link"
-          onClick={() => navigate("/settings")}
+          onClick={() => navigate("/initialpage")}
         >
           <img src={settings} alt="Settings Icon" className="link-icon" />
           Settings
         </p>
-        <p className="settings-logout-link" onClick={() => navigate("/logout")}>
+        <p
+          className="settings-logout-link"
+          onClick={handleLogout} // This will log out the user
+        >
           <img src={logout} alt="Logout Icon" className="link-icon" />
           Logout
         </p>

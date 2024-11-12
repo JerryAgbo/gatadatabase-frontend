@@ -237,3 +237,25 @@
   width: 3px; /* Reduced from 4px for a thinner leading line */
   height: 15px; /* Reduced from 20px for better alignment with reduced font */
 }
+
+.settings-logout-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Changes the cursor to a pointer (hand) */
+  color: black; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.settings-logout-link:hover {
+  color: blue; /* Text turns blue on hover */
+}
+
+.settings-logout-link img {
+  margin-right: 10px; /* Add space between the icon and text */
+}
+
+/* Optional: Add background color change on hover */
+.settings-logout-link:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  border-radius: 4px; /* Optional: Rounded corners for the background */
+}

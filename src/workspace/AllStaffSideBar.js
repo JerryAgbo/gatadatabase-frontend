@@ -7,7 +7,6 @@ import home from "../icons/home.png";
 import stats from "../icons/stats.png";
 import dropdown from "../icons/dropdown.png";
 import dropdownActive from "../icons/dropdownActive.png";
-import staff from "../icons/staff.png";
 import activities from "../icons/activities.png";
 import certificates from "../icons/certificates.png";
 import settings from "../icons/settings.png";
@@ -25,10 +24,14 @@ const AllStaffSideBar = () => {
     setOpenDropdown(openDropdown === itemName ? "" : itemName);
   };
 
+  const handleLogout = () => {
+    // Clear session data here if needed (e.g., localStorage or context)
+    navigate("/login"); // Redirect to login page
+  };
+
   const itemIcons = {
     Home: home,
     Statistics: stats,
-    "Staff Info": staff,
     Activities: activities,
     Certificates: certificates,
     Settings: settings,
@@ -38,15 +41,8 @@ const AllStaffSideBar = () => {
     Home: [
       { name: "Home", path: "/staffPage" },
       { name: "Statistics", path: "/statistics" },
-      { name: "Staff Info", path: "/staff-space" },
       { name: "Activities", path: "/active-space" },
       { name: "Certificates", path: "/certificates-space" },
-    ],
-    "Staff Info": [
-      { name: "All Staff", path: "/all-staff" },
-      { name: "Permanent Staff", path: "/permanentstaffspace" },
-      { name: "Contract Staff", path: "/contractstaffspace" },
-      { name: "Feedback", path: "/feedbackspace" },
     ],
     Activities: [
       { name: "Trainings", path: "/stafftrainingspace" },
@@ -72,7 +68,7 @@ const AllStaffSideBar = () => {
       <p className="admin-text1">Admin</p>
 
       <div className="admin-options">
-        {["Home", "Statistics", "Staff Info", "Activities", "Certificates"].map(
+        {["Home", "Statistics", "Activities", "Certificates"].map(
           (itemName) => (
             <React.Fragment key={itemName}>
               {itemName === "Staff Info" && (
@@ -122,7 +118,7 @@ const AllStaffSideBar = () => {
           <img src={settings} alt="Settings Icon" className="link-icon" />
           Settings
         </p>
-        <p className="settings-logout-link">
+        <p className="settings-logout-link" onClick={handleLogout}>
           <img src={logout} alt="Logout Icon" className="link-icon" />
           Logout
         </p>

@@ -231,3 +231,25 @@
   width: 3px; /* Reduced from 4px for a thinner leading line */
   height: 15px; /* Reduced from 20px for better alignment with reduced font */
 }
+
+.settings-logout-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Changes the mouse pointer to a pointer (arrow) when hovering over the link */
+  color: black; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.settings-logout-link:hover {
+  color: blue; /* Change text color to blue on hover */
+}
+
+.settings-logout-link img {
+  margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+/* Optional: Add a background color change on hover for the entire logout link */
+.settings-logout-link:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  border-radius: 4px; /* Optional: Rounded corners for the background */
+}
