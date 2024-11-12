@@ -32,37 +32,36 @@ const Login = () => {
     }));
   };
 
- const handleSubmit = async (e) => {
-   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-   if (!formData.staffId || !formData.password) {
-     alert("All fields must be filled out");
-     return;
-   }
+    if (!formData.staffId || !formData.password) {
+      alert("All fields must be filled out");
+      return;
+    }
 
-   try {
-     const response = await fetch("/api/login", {
-       method: "POST",
-       headers: { "Content-Type": "application/json" },
-       body: JSON.stringify(formData),
-     });
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-     if (!response.ok) {
-       const errorData = await response.json();
-       throw new Error(errorData.message || "Login failed");
-     }
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Login failed");
+      }
 
-     const data = await response.json();
-     setUserData(data); // Update the context with user data
-     localStorage.setItem("staffId", data.staffId); // Store staffId in local storage
-     navigate("/staffPage"); // Navigate after context is updated
-   } catch (error) {
-     console.error("Login error:", error);
-     alert(error.message);
-   }
- };
-  
-  
+      const data = await response.json();
+      setUserData(data); // Update the context with user data
+      localStorage.setItem("staffId", data.staffId); // Store staffId in local storage
+      navigate("/staffPage"); // Navigate after context is updated
+    } catch (error) {
+      console.error("Login error:", error);
+      alert(error.message);
+    }
+  };
+
   // Function to navigate to StaffInfo page
   const handleNavigateToStaffInfo = () => {
     navigate("/staffinfo"); // Adjust this path as necessary
