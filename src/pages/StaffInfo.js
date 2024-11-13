@@ -23,7 +23,7 @@ const ProgressRecorder = () => {
         alignItems: "center",
         justifyContent: "center",
         marginTop: "20px",
-        marginLeft: "-205px",
+        marginLeft: "-100px",
         flexWrap: "wrap",
       }}
     >

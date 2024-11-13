@@ -1,41 +1,54 @@
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .parent-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  width: 100%;
   min-height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .signup-page-container {
   display: flex;
   width: 100%;
-  align-items: flex-start;
+  max-width: 1200px; /* Limits max-width on larger screens */
+  height: 100vh; /* Makes the section full height */
+  flex-direction: row; /* Keeps content in a horizontal layout */
 }
 
 .video-container {
   flex: 0 1 30%;
+  height: 100vh; /* Full height to start from the top */
 }
 
 .video-container video {
   width: 100%;
-  height: auto;
+  height: 100vh; /* Full height for the video */
+  object-fit: cover;
 }
 
 .right-side-content {
-  margin-top: 2px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-grow: 1;
-  padding: 20px;
-  
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
 }
 .logo-container img {
   width: 20%;
   height: auto;
   margin-top: 3%;
-  margin-left: 10%;
+  margin-left: -6%;
 }
 
 .signup-page-text,
@@ -173,7 +186,7 @@
 
 /* Additional responsiveness and spacing for overall layout */
 .signup-input-group2 {
-  width: 30%; /* Adjust the width as needed */
+  width: 36%; /* Adjust the width as needed */
   margin-bottom: 0.5%; /* Space between input groups */
 }
 
