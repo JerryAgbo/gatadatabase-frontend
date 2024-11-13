@@ -1,5 +1,5 @@
 import React from "react";
-import AllStaffSideBar from "../workspace/AllStaffSideBar";
+import SideBar from "../components/SideBar";
 import AllStaffSearchBar from "../workspace/StaffSearchBar";
 import { Routes, Route } from "react-router-dom"; // Import Routes and Route
 import AdminStaffView from "../components/AdminStaffView"; // Ensure this is the correct path
@@ -8,7 +8,7 @@ import ContractStaff from "../pages/ContractStaff";
 const ContractStaffSpace = () => {
   return (
     <div className="dashboard">
-      <AllStaffSideBar />
+      <SideBar />
       <div className="main-content">
         <AllStaffSearchBar />
         <ContractStaff />

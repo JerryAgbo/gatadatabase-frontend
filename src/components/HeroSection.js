@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./HeroSection.css";
 
+
 function HeroSection() {
   const [accountCount, setAccountCount] = useState(0);
   const [gridBoxes, setGridBoxes] = useState([
@@ -15,6 +16,9 @@ function HeroSection() {
   const [permanentStaffCount, setPermanentStaffCount] = useState(0);
   const [contractStaffCount, setContractStaffCount] = useState(0);
   const [certificates, setCertificates] = useState([]);
+    const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,8 +37,7 @@ function HeroSection() {
         const contractData = await contractResponse.json();
         setContractStaffCount(contractData.count);
 
-        // Fetch certificates
-        const certResponse = await fetch("/api/certificates");
+      const certResponse = await fetch("/api/certificates");
         const certData = await certResponse.json();
         setCertificates(certData);
       } catch (error) {
@@ -47,14 +50,22 @@ function HeroSection() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 60000, // Set the delay between each slide to 60000 milliseconds (1 minute)
     slidesToShow: 1,
     slidesToScroll: 1,
   };
 
+  const openModal = (url) => {
+    setSelectedImage(url);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setModalOpen(false);
+  };
+  
   const addBox = () => {
     if (gridBoxes.length >= 5) {
       alert("You can only add up to two more boxes.");
@@ -195,46 +206,92 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="box" id="new-box-4">
-        <div className="recent-certification">Recent Certificates</div>
-        <div className="inner-boxes-container">
-          {certificates.length > 0 ? (
-            <Slider {...settings}>
-              {certificates.map((cert, index) => (
-                <div key={index} className="display-box">
-                  <img
-                    src={cert.url}
-                    alt={`Certificate ${index}`}
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                </div>
-              ))}
-            </Slider>
-          ) : (
-            <p>No certificates to display</p>
-          )}
+        <div className="box" id="new-box-4">
+          <div className="recent-certification">Recent Certificates</div>
+          <div className="inner-boxes-container">
+            {certificates.length > 0 ? (
+              <Slider {...settings}>
+                {certificates.map((cert, index) => (
+                  <div key={index} className="display-box">
+                    <img
+                      src={cert.url}
+                      alt={`Certificate ${index}`}
+                      style={{ width: "100%", height: "auto", cursor: "pointer" }}
+                      onClick={() => openModal(cert.url)}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            ) : (
+              <p>No certificates to display</p>
+            )}
+          </div>
         </div>
-      </div>
 
-      <div className="box" id="new-box-5">
-        <p className="employees-text">Statistics</p>
-        <div className="statistics-container">
-          <div className="statistic">
-            <p className="statistic-number">1,234</p>
-            <p className="statistic-description">Total Employees</p>
+        {isModalOpen && (
+          <div className="modal" onClick={closeModal} style={modalStyle}>
+            <div className="modal-content" style={modalContentStyle}>
+              <span className="close" onClick={closeModal} style={closeButtonStyle}>
+                &times;
+              </span>
+              <img
+                src={selectedImage}
+                alt="Preview"
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
           </div>
-          <div className="statistic">
-            <p className="statistic-number">567</p>
-            <p className="statistic-description">Active Projects</p>
-          </div>
-          <div className="statistic">
-            <p className="statistic-number">89%</p>
-            <p className="statistic-description">Project Completion Rate</p>
+        )}
+
+        <div className="box" id="new-box-5">
+          <p className="employees-text">Statistics</p>
+          <div className="statistics-container">
+            <div className="statistic">
+              <p className="statistic-number">1,234</p>
+              <p className="statistic-description">Total Employees</p>
+            </div>
+            <div className="statistic">
+              <p className="statistic-number">567</p>
+              <p className="statistic-description">Active Projects</p>
+            </div>
+            <div className="statistic">
+              <p className="statistic-number">89%</p>
+              <p className="statistic-description">Project Completion Rate</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
+
+// Styles for the modal
+const modalStyle = {
+  display: "flex",
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  backgroundColor: "rgba(0, 0, 0, 0.8)",
+  justifyContent: "center",
+  alignItems: "center",
+  zIndex: 1000,
+};
+
+const modalContentStyle = {
+  position: "relative",
+  maxWidth: "90%",
+  maxHeight: "90%",
+};
+
+const closeButtonStyle = {
+  position: "absolute",
+  top: "10px",
+  right: "20px",
+  color: "#fff",
+  fontSize: "30px",
+  fontWeight: "bold",
+  cursor: "pointer",
+};
 
 export default HeroSection;

@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Enables vertical scrolling when needed */
+  height: 100vh; /* Full viewport height */
+}
+
 .hero-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -5,7 +12,7 @@
   padding: 20px;
   margin-top: 70px; /* Adjust based on your layout */
   margin-left: 22%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .box {

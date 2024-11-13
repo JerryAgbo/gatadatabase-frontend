@@ -116,12 +116,10 @@ const StaffInfo = () => {
 
   const isValidForm = () => {
     if (!formData.gender) {
-      console.error("Validation Error: Gender is required.");
       alert("Gender is required.");
       return false;
     }
     if (!isValidPhoneNumber(formData.phoneNumber)) {
-      console.error("Validation Error: Invalid phone number.");
       alert("Please enter a valid phone number.");
       return false;
     }
@@ -131,7 +129,6 @@ const StaffInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isValidForm()) return;
-
     const submissionData = new FormData();
     Object.keys(formData).forEach((key) => {
       submissionData.append(key, formData[key]);
@@ -150,7 +147,7 @@ const StaffInfo = () => {
       );
       console.log("Form submitted successfully:", response.data);
       localStorage.setItem("staffId", response.data.staffId);
-      localStorage.setItem("profilePicUrl", profilePicPreview); // Save the profile picture URL to localStorage
+      localStorage.setItem("profilePicUrl", profilePicPreview);
       setUserData({ ...formData, profilePicUrl: profilePicPreview });
       navigate("/staffJob");
     } catch (error) {
@@ -167,37 +164,26 @@ const StaffInfo = () => {
     <div className="parent-container">
       <div className="signup-page-container">
         <div className="video-container">
-          <video
-            className="gata"
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{ pointerEvents: "none" }} // Prevent interaction
-          >
+          <video className="gata" autoPlay muted loop playsInline>
             <source src={gata} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
         <div className="right-side-content">
           <div className="logo-container">
             <img src={logo2} alt="Logo" className="signup-logo2" />
-            {/* All other elements like .signup-page-text, form, etc. go here */}
           </div>
           <div className="signup-page-text">
             <p className="signup-main-text">Create Account</p>
-            <p className="signup-sub-text1">Staff Personal</p>
-            <p className="signup-sub-text2">Info</p>
-
+            <p className="signup-sub-text1">Staff Personal Info</p>
             <div
               className="file-upload-wrapper"
               onClick={() => fileInputRef.current.click()}
             >
               <input
-                ref={fileInputRef} // Attach the ref here
+                ref={fileInputRef}
                 id="fileInput"
-                className="hidden-file-input"
                 type="file"
+                className="hidden-file-input"
                 onChange={handleFileChange}
                 style={{ display: "none" }}
               />
